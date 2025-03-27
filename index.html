@@ -2,18 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kyaw Thet Khaing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PWA Example</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
-    <h1>Hello this is a title</h1>
-    <div class="container">
-      <img
-        src="https://cdn.pixabay.com/photo/2024/10/20/14/09/pumpkins-9135128_1280.jpg"
-        alt=""
-      />
-    </div>
-    <script src="script.js"></script>
+    <h1>Welcome to My PWA</h1>
+    <p>This app works offline!</p>
+    <button onclick="window.open('https://www.google.com/');">Google</button>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then(() => console.log("Service Worker Registered"))
+          .catch((error) =>
+            console.log("Service Worker Registration Failed:", error)
+          );
+      }
+    </script>
   </body>
 </html>

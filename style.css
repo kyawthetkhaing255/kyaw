@@ -3,20 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  min-height: 100vh;
+}
+h1,
+p {
+  text-align: center;
+  margin-top: 10px;
+}
 h1 {
   font-size: clamp(2rem, 0.718rem + 5.47vw, 4rem);
-  text-align: center;
 }
-.container {
-  max-width: 960px;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid red;
+p {
+  font-size: clamp(1rem, 0.718rem + 2.47vw, 2rem);
+  color: blue;
 }
-img {
-  width: clamp(300px, 90vw, 960px);
-  object-fit: cover;
-  object-position: center;
+button {
+  width: 80px;
+  height: 30px;
+  border-radius: 7px;
+  border: none;
+  background-color: blue;
+  color: white;
+  margin: 40px auto;
+  display: block;
 }
